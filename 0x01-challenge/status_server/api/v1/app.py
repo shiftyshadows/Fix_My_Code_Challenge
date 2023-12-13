@@ -19,7 +19,7 @@ def hello_world():
 @app.route('/api/v1/status', methods=['GET'])
 def get_status():
     """ Get the status of the API """
-    return jsonify({"status": "API is running"}), 200
+    return jsonify({"status": "OK"}), 200
 
 
 @app.errorhandler(404)
