@@ -9,15 +9,18 @@ from flask import Flask, jsonify, make_response
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
+
 @app.route("/")
 def hello_world():
     """ index page """
     return "<p>Hello, World!</p>"
 
+
 @app.route("/api/v1/status")
 def status():
     """ status page"""
     return "<p>status of my API: Running smoothly. </p>"
+
 
 @app.errorhandler(404)
 def not_found(error):
