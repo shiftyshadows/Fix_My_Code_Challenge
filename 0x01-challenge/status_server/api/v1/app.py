@@ -16,10 +16,10 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 
-@app.route("/api/v1/status")
-def status():
-    """ status page"""
-    return "<p>status of my API: Running smoothly. </p>"
+@app.route('/api/v1/status', methods=['GET'])
+def get_status():
+    """ Get the status of the API """
+    return jsonify({"status": "API is running"}), 200
 
 
 @app.errorhandler(404)
